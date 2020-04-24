@@ -71,7 +71,7 @@ bindsym $mod+semicolon focus right
 bindsym $mod+w          exec --no-startup-id firefox 
 #bindsym $mod+Return     exec $TERMINAL 
 bindsym $mod+Return     exec i3-sensible-terminal
-bindsym $mod+n          exec "i3-sensible-terminal; cd /home/gcao/tools/ranger/; python ranger.py /home/gcao" 
+bindsym $mod+n          exec "i3-sensible-terminal && cd /home/gcao/tools/ranger/ && python ranger.py /home/gcao" 
 bindsym Print           exec "gnome-screenshot" 
 bindsym Shift+Print     exec "gnome-screenshot -i" 
 
@@ -200,7 +200,7 @@ bar {
         status_command i3status
 }
 
-set $Locker i3lock && sleep 1
+set $Locker "i3lock -i /home/gcao/Pictures/arch_lock.png -b && sleep 1"
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
