@@ -71,7 +71,7 @@ bindsym $mod+semicolon focus right
 bindsym $mod+w          exec --no-startup-id firefox 
 #bindsym $mod+Return     exec $TERMINAL 
 bindsym $mod+Return     exec i3-sensible-terminal
-bindsym $mod+n          exec "i3-sensible-terminal && cd /home/gcao/tools/ranger/ && python ranger.py /home/gcao" 
+bindsym $mod+n          exec "urxvt -hold -e python /home/gcao/tools/ranger/ranger.py /home/gcao" 
 bindsym Print           exec "gnome-screenshot" 
 bindsym Shift+Print     exec "gnome-screenshot -i" 
 
