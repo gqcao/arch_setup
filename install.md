@@ -6,7 +6,8 @@ lsblk
 dd if=archlinux-??.iso of=/dev/sda status=progress
 ```
 ### Check if UEFI is enabled, and start an EFI system partition.
-|  BIOS with MBR                                 |
+|  BIOS with MBR                                                           |
+| -------------------------------------------------------------------------|
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
 |`/mnt` 	|`/dev/sdX1` 	|Linux 	          | Remainder of the device|
