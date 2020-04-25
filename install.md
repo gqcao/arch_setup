@@ -83,7 +83,7 @@ passwd
 vim /etc/locale.gen
 # uncomment "en_US.UTF-8 UTF-8" and "en_US ISO-8859-1"
 locale-gen
-vi /etc/locale.conf
+vim /etc/locale.conf
 # add the following
 /******************************
 LANG=en-US.UTF-8
@@ -100,4 +100,19 @@ LC_TELEPHONE="en_US.UTF-8"
 LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 ******************************/
+```
+### setup timezone
+```
+ln -sf /usr/share/zoneinfo/europe/stockholm /etc/localtime
+```
+### hostname 
+```
+vim /etc/hostname 
+```
+### getting ready for the firs boot
+```
+exit
+umount -R /mnt
+lsblk
+reboot
 ```
