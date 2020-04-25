@@ -35,7 +35,7 @@ ls /sys/firmware/efi/efivars
 ```
 fdisk /dev/sda 
 ```
-### format drives
+### Format disks 
 ```
 mkfs.ext4 /dev/sda1 # boot partition
 mkfs.ext4 /dev/sda3 # root partition
@@ -64,20 +64,20 @@ pacstrap /mnt base base-devel linux linux-firmware vim
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 ```
-### move to mount point
+### Move to mount point
 ```
 arch-chroot /mnt
 ```
-### install wifi
+### Install network manager 
 ```
 pacman -S neworkmanager
 ```
-### install grub for booting
+### Install grub for booting
 ```
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
-### some other setups
+### Some other setups to setup
 ```
 passwd
 vim /etc/locale.gen
@@ -105,11 +105,11 @@ LC_IDENTIFICATION="en_US.UTF-8"
 ```
 ln -sf /usr/share/zoneinfo/europe/stockholm /etc/localtime
 ```
-### hostname 
+### Set hostname 
 ```
 vim /etc/hostname 
 ```
-### getting ready for the firs boot
+### Getting ready for the first boot
 ```
 exit
 umount -R /mnt
