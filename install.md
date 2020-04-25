@@ -4,10 +4,10 @@ This is a step-by-step guide for installing Arch Linux on laptops.
 ```
 lsblk
 dd if=archlinux-??.iso of=/dev/sda status=progress
+```
 ### Update the system clock
 ```
 timedatectl set-ntp true
-```
 ```
 ### Check if UEFI is enabled, and start an EFI system partition.
 ```
