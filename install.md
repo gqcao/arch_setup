@@ -6,11 +6,21 @@ lsblk
 dd if=archlinux-??.iso of=/dev/sda status=progress
 ```
 ### Check if UEFI is enabled, and start an EFI system partition.
+```
+ls /sys/firmware/efi/efivars
+```
 #### BIOS with MBR
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
 |`/mnt` 	|`/dev/sdX1` 	|Linux 	          | Remainder of the device|
 |[SWAP] 	|`/dev/sdX2` 	|Linux swap 	  |More than 512 MiB       |
+#### More advanced BIOS with MBR
+| Mount point 	| Partition 	| Partition type  | Suggested size         |
+| ------------- |:-------------:| ---------------:| ----------------------:|
+|`/mnt/boot` 	|`/dev/sdX1` 	|Linux boot | 200 MiB |
+|[SWAP] 	|`/dev/sdX2` 	|Linux swap 	  | 12 GB  |
+|`/mnt/root` 	|`/dev/sdX3` 	|Linux root | 25 GB  |
+|`/mnt/home` 	|`/dev/sdX4` 	|Linux home | Remainder of the device|
 #### UEFI with GPT
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
