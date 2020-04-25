@@ -8,6 +8,7 @@ dd if=archlinux-??.iso of=/dev/sda status=progress
 ### Check if UEFI is enabled, and start an EFI system partition.
 |  <td colspan=4>BIOS with MBR                                             |
 | ------------- |:-------------:| ---------------:| ----------------------:|
+|`/mnt` 	|`/dev/sdX1` 	|Linux 	          | Remainder of the device|
 
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
