@@ -11,7 +11,7 @@ dd if=archlinux-??.iso of=/dev/sda status=progress
 | Span <td colspan=3>triple  <td colspan=2>double
 
 
-|  <td colspan=4>BIOS with MBR                                             |
+|  BIOS with MBR <td colspan=3>                                            |
 | ------------- |:-------------:| ---------------:| ----------------------:|
 |`/mnt` 	|`/dev/sdX1` 	|Linux 	          | Remainder of the device|
 
