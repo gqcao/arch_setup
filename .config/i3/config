@@ -68,7 +68,7 @@ bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
 # change to my setup shortcuts
-bindsym $mod+w          exec --no-startup-id firefox 
+bindsym $mod+f          exec --no-startup-id firefox 
 #bindsym $mod+Return     exec $TERMINAL 
 bindsym $mod+Return     exec i3-sensible-terminal
 bindsym $mod+n          exec "urxvt -e python /home/gcao/tools/ranger/ranger.py /home/gcao" 
@@ -104,11 +104,12 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
+bindsym F11 fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
+bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating

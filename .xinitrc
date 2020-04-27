@@ -7,7 +7,7 @@ export XMODIFIERS=@im=fcitx
 xmodmap -e 'pointer = 3 2 1'
 
 # set up the external monitor
-bash /home/gcao/.config/display/home-setup.sh
+bash ~/.config/display/home-setup.sh
 
 # set background
 ~/.fehbg &
@@ -17,6 +17,9 @@ picom &
 
 # start language input
 fcitx &
+
+# run network applet
+bash ~/.config/nm-applet/nmgui
 
 # config urxvt based on personal preference
 #xrdb ~/.Xdefaults

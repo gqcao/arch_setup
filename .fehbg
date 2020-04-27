@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while true; do
+    feh --no-fehbg -z --bg-fill /home/gcao/Pictures/Wallpapers/* 
+    sleep 3600 
+done
+
+
