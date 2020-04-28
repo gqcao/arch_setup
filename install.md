@@ -70,12 +70,31 @@ arch-chroot /mnt
 ```
 ### Install network manager 
 ```
-pacman -S neworkmanager
+pacman -S networkmanager
+systemctl enable NetworkManager
 ```
 ### Install grub for booting
 ```
+pacman -S grub
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+```
+### UEFI booting
+#### Partition a UEFI drive
+```
+mkfs.fat -F32 /dev/sdxY
+```
+#### Install boot tool 
+```
+mkdir /mnt/efi
+pacman -S dialog wpa_supplicant refind-efi
+mkdir -p /esp/EFI/Boot
+cp /usr/share/refind/refind_x64.efi /esp/EFI/Boot/bootx64.efi
+cp -r /usr/share/refind/drivers_x64/ /esp/EFI/Boot/
+echo 'extra_kernel_version_strings linux,linux-hardened,linux-lts,linux-zen,linux-git;' > /esp/EFI/Boot/refind.conf
+echo 'fold_linux_kernels false' >> /esp/EFI/Boot/refind.conf
+echo 'default_selection "linux from"' >> /esp/EFI/Boot/refind.conf
+https://wiki.archlinux.org/index.php/User:Soloturn/Quick_Installation_guide_UEFI
 ```
 ### Some other setups to setup
 ```
@@ -99,6 +118,7 @@ LC_ADDRESS="en_US.UTF-8"
 LC_TELEPHONE="en_US.UTF-8"
 LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=en_US.UTF-8
 ******************************/
 ```
 ### setup timezone
