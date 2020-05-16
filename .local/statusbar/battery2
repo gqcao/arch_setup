@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+#
+# Copyright (C) 2016 James Murphy
+# Licensed under the GPL version 2 only
+#
+# A battery indicator blocklet script for i3blocks
+
+import re
+from subprocess import check_output
+
+status = check_output(['upower', '-i', '/org/freedesktop/UPower/devices/battery_BAT0'], universal_newlines=True).split('\n')
+
+if not status:
+    # stands for no battery found
+    fulltext = "<span color='red'><span font='FontAwesome'>\uf00d \uf240</span></span>"
+    percentleft = 100
+else:
+    # if there is more than one battery in one laptop, the percentage left is 
+    # available for each battery separately, although state and remaining 
+    # time for overall block is shown in the status of the first battery 
+    #state_batteries=[]
+    commasplitstatus_batteries=[]
+    percentleft_batteries=[]
+    time = ""
+    state = status[11].split()[1]
+    if state == 'fully-charged':
+        commasplitstatus = status[19].split()[1]
+    else:
+        commasplitstatus = status[20].split()[1]
+        time = status[19].split()[3]
+        if status[19].split()[4] == 'hours':
+            time = time.split('.')[0] + ':'+str(int(time.split('.')[1])* 6)
+        elif status[19].split()[4] == 'minutes':
+            time = '0:'+ str(round(float(time)))
+        time = re.match(r"(\d+):(\d+)", time)
+        if time:
+            time = ":".join(time.groups())
+            timeleft = " ({})".format(time)
+        else:
+            timeleft = ""
+
+    p = int(commasplitstatus.rstrip("%"))
+    if p>0:
+        percentleft_batteries.append(p)
+    commasplitstatus_batteries.append(commasplitstatus)
+    #state = state_batteries
+    commasplitstatus = commasplitstatus_batteries[0]
+    if percentleft_batteries:
+        percentleft = int(sum(percentleft_batteries)/len(percentleft_batteries))
+    else:
+        percentleft = 0
+
+    # stands for charging
+    FA_LIGHTNING = "<span color='yellow'><span font='FontAwesome'>\uf0e7</span></span>"
+
+    # stands for plugged in
+    FA_PLUG = "<span font='FontAwesome'>\uf1e6</span>"
+
+    # stands for using battery
+    FA_BATTERY = "<span font='FontAwesome'>\uf240</span>"
+
+    # stands for unknown status of battery
+    FA_QUESTION = "<span font='FontAwesome'>\uf128</span>"
+
+    if state == "discharging":
+        fulltext = FA_BATTERY + " "
+    elif state == "fully-charged":
+        fulltext = FA_PLUG + " "
+        timeleft = ""
+    elif state == "Unknown":
+        fulltext = FA_QUESTION + " " + FA_BATTERY + " "
+        timeleft = ""
+    else:
+        fulltext = FA_LIGHTNING + " " + FA_PLUG + " "
+
+    def color(percent):
+        if percent < 10:
+            # exit code 33 will turn background red
+            return "#FFFFFF"
+        if percent < 20:
+            return "#FF3300"
+        if percent < 30:
+            return "#FF6600"
+        if percent < 40:
+            return "#FF9900"
+        if percent < 50:
+            return "#FFCC00"
+        if percent < 60:
+            return "#FFFF00"
+        if percent < 70:
+            return "#FFFF33"
+        if percent < 80:
+            return "#FFFF66"
+        return "#FFFFFF"
+
+    form =  '<span color="{}">{}%</span>'
+    fulltext += form.format(color(percentleft), percentleft)
+    fulltext += timeleft
+
+print(fulltext)
+print(fulltext)
+if percentleft < 10:
+    exit(33)
