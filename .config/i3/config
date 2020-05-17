@@ -77,7 +77,7 @@ bindsym $mod+f          exec --no-startup-id firefox
 bindsym $mod+Return     exec i3-sensible-terminal
 bindsym $mod+n          exec "urxvt -e python /home/gcao/tools/ranger/ranger.py /home/gcao" 
 bindsym Print           exec "gnome-screenshot" 
-bindsym Shift+Print     exec "gnome-screenshot -i" 
+bindsym $mod+Print     exec "gnome-screenshot -i" 
 
 # Switch between workspaces
 bindsym Ctrl+$alt+Left  workspace prev 
