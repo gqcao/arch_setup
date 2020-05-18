@@ -18,7 +18,7 @@ pacman -S xorg-server xorg-xinit
 ```
 ## Install windows manager
 ```
-pacman -S i3-gaps i3status rxvt-unicode dmenu
+pacman -S i3-gaps i3blocks rxvt-unicode dmenu
 ```
 ## Install fonts including Chinese
 ```
@@ -37,4 +37,16 @@ mkdir ~/Projects
 git clone git@github.com:cgq5/arch_setup.git
 # copy bashrc and then reboot
 reboot
+```
+## Other useful software and tips
+```
+# gimp
+p -S gimp # Problem with gsfonts in urxvt and i3blocks
+p -S ttf-dejavu # gives an alternative dependency
+
+# mount usb
+sudo pacman -S udisk2
+sudo ln -s /run/media /media 
+udisksctl mount -b /dev/sdb1
+udisksctl unmount -b /dev/sdb1
 ```

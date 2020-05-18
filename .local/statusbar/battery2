@@ -23,7 +23,7 @@ else:
     percentleft_batteries=[]
     time = ""
     state = status[11].split()[1]
-    if state == 'fully-charged':
+    if state == 'fully-charged' or status[19].split()[1] == '100%':
         commasplitstatus = status[19].split()[1]
     else:
         commasplitstatus = status[20].split()[1]
