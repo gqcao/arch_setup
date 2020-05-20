@@ -32,7 +32,7 @@ markup=none
 
 [weather]
 command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
+interval=60
 color=#A4C2F4
 
 # Volume control
