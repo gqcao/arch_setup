@@ -27,14 +27,14 @@ else:
         commasplitstatus = status[19].split()[1]
     else:
         commasplitstatus = status[20].split()[1]
-        time = status[19].split()[3]
-        if status[19].split()[4] == 'hours':
-            time = time.split('.')[0] + ':'+str(int(time.split('.')[1])* 6)
-        elif status[19].split()[4] == 'minutes':
-            time = '0:'+ str(round(float(time)))
-        time = re.match(r"(\d+):(\d+)", time)
-        if time:
-            time = ":".join(time.groups())
+        if int(commasplitstatus.rstrip("%")) < 95:
+            time = status[19].split()[3]
+            if status[19].split()[4] == 'hours':
+                time = time.split('.')[0] + ':'+str(int(time.split('.')[1])* 6)
+            elif status[19].split()[4] == 'minutes':
+                time = '00:'+ str(round(float(time)))
+            time = re.match(r"(\d+):(\d+)", time)
+            time = ":".join([time.groups()[0].zfill(2),  time.groups()[1].zfill(2)])
             timeleft = " ({})".format(time)
         else:
             timeleft = ""
