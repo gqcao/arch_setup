@@ -49,6 +49,7 @@ bindsym $mod+plus               exec amixer -q -D pulse sset Master 5%+ && pkill
 bindsym $mod+Shift+plus         exec amixer -q -D pulse sset Master 15%+ && pkill -RTMIN+10 i3blocks 
 bindsym $mod+minus              exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym $mod+Shift+minus        exec amixer -q -D pulse sset Master 15%- && pkill -RTMIN+10 i3blocks
+bindsym $mod+m                  exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
 # Volume control on laptop
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
