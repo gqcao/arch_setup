@@ -34,6 +34,7 @@ alias deact='source deactivate'
 alias clr='clear'
 alias p='sudo pacman'
 alias weeknum='date +%V'
+alias webcam='mpv --title="mpvfloat" av://v4l2:/dev/video2 --profile=low-latency --untimed'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 # Export path
