@@ -49,4 +49,7 @@ sudo pacman -S udisk2
 sudo ln -s /run/media /media 
 udisksctl mount -b /dev/sdb1
 udisksctl unmount -b /dev/sdb1
+
+# Need **ttf-font-awesome** to show icons in i3blocks, 
+sudo pacman -S ttf-font-awesome
 ```
