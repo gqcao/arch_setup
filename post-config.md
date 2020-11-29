@@ -53,3 +53,9 @@ udisksctl unmount -b /dev/sdb1
 # Need **ttf-font-awesome** to show icons in i3blocks, 
 sudo pacman -S ttf-font-awesome
 ```
+
+## Adjust backlight by keyboard and hotkeys
+```
+pacman -S acpi acpilight
+# reboot and include the user in 'video' group for 'brightness' file to modify its content
+```
