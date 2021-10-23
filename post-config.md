@@ -28,15 +28,21 @@ pacman -S noto-fonts noto-fonts-cjk
 ```
 pacman -S git openssh
 ```
-## Copy config files from my github repo
+## Copy config files from my Github repo
 ```
 # move to user "gcao"
 su gcao
 pwd
 mkdir ~/Projects
-git clone git@github.com:cgq5/arch_setup.git
+git clone https://github.com/gqcao/arch_setup.git 
 # copy bashrc and then reboot
 reboot
+```
+## Install Ranger
+```
+wget https://ranger.github.io/ranger-stable.tar.gz
+cd ~/tools/
+tar xvf ranger-stable.tar.gz
 ```
 ## Other useful software and tips
 ```
@@ -53,9 +59,44 @@ udisksctl unmount -b /dev/sdb1
 # Need **ttf-font-awesome** to show icons in i3blocks, 
 sudo pacman -S ttf-font-awesome
 ```
-
 ## Adjust backlight by keyboard and hotkeys
 ```
 pacman -S acpi acpilight
 # reboot and include the user in 'video' group for 'brightness' file to modify its content
+The directory of brightness is '/sys/class/backlight/acpi_video0/brightness'
+sudo usermod -aG video gcao
+```
+## Chinese inputs
+```
+sudo pacman -S fcitx fcitx-configtool fcitx-googlepinyin
+```
+## Linux Sound System
+```
+# The package contains the alsamixer and amixer utilities
+sudo pacman -S alsa-utils
+```
+### Umute the sound card
+```
+## Use amixer
+amixer sset Master unmute
+amixer sset Speaker unmute
+amixer sset Headphone unmute
+# Use alsamixer
+alsamixer
+```
+## Install PulseAudio to show the volume bar
+```
+sudo pacman -S pulseaudio pulsemixer
+```
+## Network manager applet on a system tray
+```
+sudo pacman -S network-manager-applet 
+```
+## Latex
+```
+sudo pacman -S texlive-core
+```
+## Screenshot
+```
+sudo pacman -S gnome-screenshot
 ```

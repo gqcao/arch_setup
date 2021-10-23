@@ -18,9 +18,6 @@ picom &
 # start language input
 fcitx &
 
-# run network applet
-bash ~/.config/nm-applet/nmgui
-
 # config urxvt based on personal preference
 #xrdb ~/.Xdefaults
 

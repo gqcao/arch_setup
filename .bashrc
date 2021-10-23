@@ -35,7 +35,7 @@ alias clr='clear'
 alias p='sudo pacman'
 alias rnd='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;'
 alias weeknum='date +%V'
-alias webcam='mpv --title="mpvfloat" av://v4l2:/dev/video2 --profile=low-latency --untimed'
+alias webcam='mpv --title="mpvfloat" --demuxer-lavf-format=video4linux2 --demuxer-lavf-o-set=input_format=mjpeg --geometry=25% av://v4l2:/dev/video2 --profile=low-latency --untimed'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 # Export path
