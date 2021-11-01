@@ -88,13 +88,17 @@ alsamixer
 ```
 sudo pacman -S pulseaudio pulsemixer
 ```
+## xrandr  
+```
+sudo pacman -S xorg-xrandr arandr 
+```
 ## Network manager applet on a system tray
 ```
 sudo pacman -S network-manager-applet 
 ```
 ## Latex
 ```
-sudo pacman -S texlive-core
+sudo pacman -S texlive-most  # Install several packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
 ```
 ## Screenshot
 ```
