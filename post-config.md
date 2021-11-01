@@ -1,5 +1,6 @@
-# Post configurations
+% Post configurations
 This page is intended to install the essential packages and configuration after the Arch Linux installation.
+
 ## User setup
 ```
 useradd -m -g wheel gcao
@@ -98,9 +99,26 @@ sudo pacman -S network-manager-applet
 ```
 ## Latex
 ```
-sudo pacman -S texlive-most  # Install several packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
+sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
 ```
 ## Screenshot
 ```
 sudo pacman -S gnome-screenshot
+```
+## Bluetooth
+### Install necessary *bluez* packages
+```
+sudo pacman -S bluez bluez-utils
+```
+### Start the bluetooth service 
+```
+sudo systemd start bluetooth.service
+rfkill unblock bluetooth
+bluetoothctl power on
+```
+### Start bluetooth support for the audio
+```
+sudo pacman -S pulseaudio-bluetooth
+pulseaudio -k
+pulseaudio --start
 ```

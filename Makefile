@@ -1,6 +1,6 @@
 PROJECT=post-config
 MD=pandoc
-FORMAT=pdf
+FORMAT=html
 BUILDMD=$(MD) -s -o $(PROJECT).$(FORMAT) $(PROJECT).md
 
 all:
