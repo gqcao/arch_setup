@@ -53,7 +53,8 @@ p -S ttf-dejavu # gives an alternative dependency
 
 # mount usb
 sudo pacman -S udisk2
-sudo ln -s /run/media /media 
+sudo ln -s /run/media /media
+sudo pacman -S ntfs-3g # Old hardrive uses ntfs format
 udisksctl mount -b /dev/sdb1
 udisksctl unmount -b /dev/sdb1
 
