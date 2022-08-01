@@ -98,6 +98,10 @@ sudo pacman -S xorg-xrandr arandr
 ```
 sudo pacman -S network-manager-applet 
 ```
+## VPN on network manager
+"""
+pacman -S openconnect networkmanager-openconnect
+"""
 ## Latex
 ```
 sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
@@ -113,7 +117,7 @@ sudo pacman -S bluez bluez-utils
 ```
 ### Start the bluetooth service 
 ```
-sudo systemd start bluetooth.service
+sudo systemctl start bluetooth
 rfkill unblock bluetooth
 bluetoothctl power on
 ```
