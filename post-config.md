@@ -98,6 +98,15 @@ sudo pacman -S xorg-xrandr arandr
 ```
 sudo pacman -S network-manager-applet 
 ```
+### nm-applet says Not authorized to control network
+```
+# Install polkit
+sudo pacman -S polkit
+sudo systemctl start polkit
+
+# Add to network group
+sudo usermod -G network -a gcao
+```
 ## VPN on network manager
 """
 pacman -S openconnect networkmanager-openconnect
