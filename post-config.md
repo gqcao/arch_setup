@@ -136,3 +136,8 @@ sudo pacman -S pulseaudio-bluetooth
 pulseaudio -k
 pulseaudio --start
 ```
+### Set time manually on RPi
+```
+timedatectl set-ntp False
+timedatectl set-time "2022-11-02 20:30:00"
+```
