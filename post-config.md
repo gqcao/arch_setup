@@ -19,7 +19,7 @@ pacman -S xorg-server xorg-xinit
 ```
 ## Install windows manager
 ```
-pacman -S i3-gaps i3blocks rxvt-unicode dmenu
+pacman -S i3-wm i3blocks rxvt-unicode dmenu
 ```
 ## Install fonts including Chinese
 ```
@@ -108,9 +108,9 @@ sudo systemctl start polkit
 sudo usermod -G network -a gcao
 ```
 ## VPN on network manager
-"""
+```
 pacman -S openconnect networkmanager-openconnect
-"""
+```
 ## Latex
 ```
 sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
