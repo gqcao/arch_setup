@@ -88,7 +88,7 @@ alsamixer
 ```
 ## Install PulseAudio to show the volume bar
 ```
-sudo pacman -S pulseaudio pulsemixer
+sudo pacman -S pulseaudio pulseaudio-alsa pulsemixer
 ```
 ## xrandr  
 ```
