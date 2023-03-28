@@ -136,6 +136,9 @@ sudo pacman -S pulseaudio-bluetooth
 pulseaudio -k
 pulseaudio --start
 ```
+### Enable bluetooth in RPi
+From `/boot/config.txt`, uncomment the corresponding line.
+
 ### Set time manually on RPi
 ```
 timedatectl set-ntp False
