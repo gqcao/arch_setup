@@ -144,3 +144,14 @@ From `/boot/config.txt`, uncomment the corresponding line.
 timedatectl set-ntp False
 timedatectl set-time "2022-11-02 20:30:00"
 ```
+### Phone file transfer
+```
+sudo pacman -S android-file-transfer
+aft-mtp-mount ~/mnt         # Mount
+fusermount -u mountpoint    # Unmount
+```
+### udisks
+```
+udisksctl mount -b /dev/sdc1        # Mount
+udisksctl unmount -b /dev/sdc1      # Unmount
+```
