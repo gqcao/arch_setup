@@ -51,7 +51,7 @@ export CPPFLAGS="-I/home/gcao/local/include"
 export LDFLAGS="-L/home/gcao/local/lib"
 
 export TERM=xterm
-export TERMINFO=/etc/terminfo
+export TERMINFO=/usr/share/terminfo
 
 export LC_ALL="en_US.UTF-8"
 # anaconda
