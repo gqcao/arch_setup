@@ -13,9 +13,8 @@ if [[ "$(tty)" = "/dev/tty1" ]]; then
 fi
 
 # Environmental variables
-BROWSER=firefox
-TERMINAL=i3-sensible-terminal
-FILE_MANAGER="cd /home/gcao/tools/ranger/; python ranger.py /home/gcao"
+export BROWSER=firefox
+export TERMINAL=st
 
 # Alias..
 alias JabRef='java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'
@@ -50,9 +49,9 @@ export CPLUS_INCLUDE_PATH=/home/gcao/local/include
 export CPPFLAGS="-I/home/gcao/local/include"
 export LDFLAGS="-L/home/gcao/local/lib"
 
-export TERM=xterm
+export TERM=urxvt
 export TERMINFO=/usr/share/terminfo
 
 export LC_ALL="en_US.UTF-8"
 # anaconda
-export PATH=/home/gcao/tools/anaconda3/bin/:$PATH
+export PATH=/home/gcao/tools/miniconda3/bin/:$PATH

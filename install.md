@@ -123,7 +123,7 @@ LC_ALL=en_US.UTF-8
 ```
 ### setup timezone
 ```
-ln -sf /usr/share/zoneinfo/europe/stockholm /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 ```
 ### Set hostname 
 ```

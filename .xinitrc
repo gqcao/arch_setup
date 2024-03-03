@@ -19,7 +19,7 @@ picom &
 fcitx &
 
 # config urxvt based on personal preference
-#xrdb ~/.Xdefaults
+#xrdb ~/.Xresources
 
 # start i3
 exec i3

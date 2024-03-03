@@ -1,4 +1,4 @@
-% Post configurations
+# Post configurations
 This page is intended to install the essential packages and configuration after the Arch Linux installation.
 
 ## User setup
