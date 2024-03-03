@@ -15,6 +15,7 @@ fi
 # Environmental variables
 export BROWSER=firefox
 export TERMINAL=st
+export EDITOR=vim
 
 # Alias..
 alias JabRef='java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'

@@ -10,7 +10,7 @@ xmodmap -e 'pointer = 3 2 1'
 bash ~/.config/display/home-setup.sh
 
 # set background
-~/.fehbg &
+fehbg &
 
 # set visual effects
 picom &
