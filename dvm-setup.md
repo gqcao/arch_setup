@@ -10,7 +10,9 @@ sudo make install
 ```
 wget https://dwm.suckless.org/patches/tab/dwm-tab-i3like-20211121-a786211.diff
 cd dwm
-git apply dwm-tab-i3like-20211121-a786211.diff
+git apply patches/dwm-tab-i3like-20211121-a786211.diff
+## Alternatively,
+patch < patches/dwm-tab-i3like-20211121-a786211.diff
 ```
 - Add the following code in `config.h`
 ```
