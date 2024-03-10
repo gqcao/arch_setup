@@ -32,5 +32,5 @@ In `xinitrc`, add the following.
 ```
 dunst &
 dwmblocks &
-exec startdwm
+exec dwm
 ```

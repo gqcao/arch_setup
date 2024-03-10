@@ -12,14 +12,24 @@ bash ~/.config/display/home-setup.sh
 # set background
 fehbg &
 
+# network manager on systray
+nm-applet &
+
 # set visual effects
 picom &
 
 # start language input
 fcitx &
 
+# notification
+dunst &
+
 # config urxvt based on personal preference
 #xrdb ~/.Xresources
+
+# start dwm
+# dwmblocks &
+# exec dwm
 
 # start i3
 exec i3
