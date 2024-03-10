@@ -21,6 +21,10 @@ pacman -S xorg-server xorg-xinit
 ```
 pacman -S i3-wm i3blocks rxvt-unicode dmenu
 ```
+## Install emoji fonts for dwm status bar
+```
+pacman -S noto-fonts-emoji
+```
 ## Install fonts including Chinese
 ```
 pacman -S noto-fonts noto-fonts-cjk
