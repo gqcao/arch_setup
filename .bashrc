@@ -50,7 +50,7 @@ export CPLUS_INCLUDE_PATH=/home/gcao/local/include
 export CPPFLAGS="-I/home/gcao/local/include"
 export LDFLAGS="-L/home/gcao/local/lib"
 
-export TERM=urxvt
+export TERM=st
 export TERMINFO=/usr/share/terminfo
 
 export LC_ALL="en_US.UTF-8"

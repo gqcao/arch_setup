@@ -17,8 +17,6 @@ set hls
 " Wrap text instead of being on one line
 set lbr
 
-" Change colorscheme from default to delek
-colorscheme delek
 
 
 
