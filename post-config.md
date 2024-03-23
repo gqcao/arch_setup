@@ -18,14 +18,20 @@ vim /etc/sudoers
 pacman -S xorg-server xorg-xinit
 ```
 ## Install windows manager
+### i3wm
 ```
 pacman -S i3-wm i3blocks rxvt-unicode dmenu
 ```
-## Install emoji fonts for dwm status bar
+### dwm, dwmblocks, st
 ```
-pacman -S noto-fonts-emoji
+git clone https://github.com/gqcao/suckless.git
 ```
-## Install fonts including Chinese
+## Fonts
+### Show icons in dwmblocks
+```
+pacman -S ttf-font-awesome noto-fonts-emoji
+```
+### Install fonts including Chinese
 ```
 pacman -S noto-fonts noto-fonts-cjk
 ```
@@ -49,28 +55,10 @@ wget https://ranger.github.io/ranger-stable.tar.gz
 cd ~/tools/
 tar xvf ranger-stable.tar.gz
 ```
-## Other useful software and tips
+## gimp
 ```
-# gimp
-p -S gimp # Problem with gsfonts in urxvt and i3blocks
-p -S ttf-dejavu # gives an alternative dependency
-
-# mount usb
-sudo pacman -S udisk2
-sudo ln -s /run/media /media
-sudo pacman -S ntfs-3g # Old hardrive uses ntfs format
-udisksctl mount -b /dev/sdb1
-udisksctl unmount -b /dev/sdb1
-
-# Need **ttf-font-awesome** to show icons in i3blocks, 
-sudo pacman -S ttf-font-awesome
-```
-## Adjust backlight by keyboard and hotkeys
-```
-pacman -S acpi acpilight
-# reboot and include the user in 'video' group for 'brightness' file to modify its content
-The directory of brightness is '/sys/class/backlight/acpi_video0/brightness'
-sudo usermod -aG video gcao
+pacman -S gimp           # Problem with gsfonts in urxvt and i3blocks
+pacman -S ttf-dejavu     # Gives an alternative dependency
 ```
 ## Chinese inputs
 ```
@@ -142,12 +130,24 @@ pulseaudio --start
 ```
 ### Enable bluetooth in RPi
 From `/boot/config.txt`, uncomment the corresponding line.
+
 ## Update system clock on RPi
-Install `chrony` and then run `chronyd`.
+```
+sudo pacman -S chrony
+sudo chronyd   # To start off
+```
 ### Manually set time on RPi
 ```
 timedatectl set-ntp False
 timedatectl set-time "2022-11-02 20:30:00"
+```
+## Mount USB
+```
+sudo pacman -S udisk2
+sudo ln -s /run/media /media
+sudo pacman -S ntfs-3g   # Old hardrive uses ntfs format
+udisksctl mount -b /dev/sdb1
+udisksctl unmount -b /dev/sdb1
 ```
 ## Phone file transfer
 ```
@@ -155,8 +155,10 @@ sudo pacman -S android-file-transfer
 aft-mtp-mount ~/mnt         # Mount
 fusermount -u mountpoint    # Unmount
 ```
-### udisks
+## Adjust backlight by keyboard and hotkeys
 ```
-udisksctl mount -b /dev/sdc1        # Mount
-udisksctl unmount -b /dev/sdc1      # Unmount
+pacman -S acpi acpilight
+# reboot and include the user in 'video' group for 'brightness' file to modify its content
+The directory of brightness is '/sys/class/backlight/acpi_video0/brightness'
+sudo usermod -aG video gcao
 ```
