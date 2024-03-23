@@ -142,13 +142,14 @@ pulseaudio --start
 ```
 ### Enable bluetooth in RPi
 From `/boot/config.txt`, uncomment the corresponding line.
-
-### Set time manually on RPi
+## Update system clock on RPi
+Install `chrony` and then run `chronyd`.
+### Manually set time on RPi
 ```
 timedatectl set-ntp False
 timedatectl set-time "2022-11-02 20:30:00"
 ```
-### Phone file transfer
+## Phone file transfer
 ```
 sudo pacman -S android-file-transfer
 aft-mtp-mount ~/mnt         # Mount
