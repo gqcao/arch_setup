@@ -8,14 +8,14 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-	pgrep i3 || startx
-fi
-
 # Environmental variables
 export BROWSER=firefox
 export TERMINAL=st
 export EDITOR=vim
+
+# Terminal
+export TERM=st
+export TERMINFO=/usr/share/terminfo
 
 # Alias..
 alias JabRef='java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'
@@ -50,9 +50,9 @@ export CPLUS_INCLUDE_PATH=/home/gcao/local/include
 export CPPFLAGS="-I/home/gcao/local/include"
 export LDFLAGS="-L/home/gcao/local/lib"
 
-export TERM=st
-export TERMINFO=/usr/share/terminfo
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	pgrep i3 || startx
+fi
 
-export LC_ALL="en_US.UTF-8"
 # anaconda
 export PATH=/home/gcao/tools/miniconda3/bin/:$PATH
