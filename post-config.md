@@ -17,14 +17,39 @@ vim /etc/sudoers
 ```
 pacman -S xorg-server xorg-xinit
 ```
+## Install git, openssh, wget
+```
+pacman -S git openssh wget
+```
+## Copy config files from my Github repo
+```
+# move to user "gcao"
+su gcao
+pwd
+mkdir ~/Projects
+git clone https://github.com/gqcao/arch_setup.git
+cp .bashrc .vimrc .xinitrc ~/
+reboot
+```
 ## Install windows manager
-### i3wm
-```
-pacman -S i3-wm i3blocks rxvt-unicode dmenu
-```
 ### dwm, dwmblocks, st
 ```
 git clone https://github.com/gqcao/suckless.git
+```
+Walk through `suckless-setup.md` for the installation.
+### dmenu
+```
+sudo pacman -S dmenu
+```
+### i3-wm
+```
+pacman -S i3-wm i3blocks rxvt-unicode
+```
+## Install Ranger
+```
+wget https://ranger.github.io/ranger-stable.tar.gz
+cd ~/tools/
+tar xvf ranger-stable.tar.gz
 ```
 ## Fonts
 ### Show icons in dwmblocks
@@ -34,26 +59,6 @@ pacman -S ttf-font-awesome noto-fonts-emoji
 ### Install fonts including Chinese
 ```
 pacman -S noto-fonts noto-fonts-cjk
-```
-## Install git
-```
-pacman -S git openssh
-```
-## Copy config files from my Github repo
-```
-# move to user "gcao"
-su gcao
-pwd
-mkdir ~/Projects
-git clone https://github.com/gqcao/arch_setup.git 
-# copy bashrc and then reboot
-reboot
-```
-## Install Ranger
-```
-wget https://ranger.github.io/ranger-stable.tar.gz
-cd ~/tools/
-tar xvf ranger-stable.tar.gz
 ```
 ## gimp
 ```
