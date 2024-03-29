@@ -102,8 +102,11 @@ passwd
 vim /etc/locale.gen
 # uncomment "en_US.UTF-8 UTF-8" and "en_US ISO-8859-1"
 locale-gen
+# push locale config
+wget https://raw.githubusercontent.com/gqcao/arch_setup/master/locale.txt
+cat locale.txt > /etc/locale.conf
+# open and add the text
 vim /etc/locale.conf
-# add the following
 /******************************
 LANG=en-US.UTF-8
 LC_CTYPE="en_US.UTF-8"
