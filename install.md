@@ -16,7 +16,7 @@ ls /sys/firmware/efi/efivars
 #### BIOS with MBR
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
-|[SWAP] 	|`/dev/sdX1` 	|Linux swap 	  |More than 512 MiB       |
+|[SWAP] 	|`/dev/sdX1` 	|Linux swap 	  | 12 GB                  |
 |`/mnt` 	|`/dev/sdX2` 	|Linux 	          | Remainder of the device|
 #### More advanced BIOS with MBR
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
@@ -33,7 +33,7 @@ ls /sys/firmware/efi/efivars
 |[SWAP] |	`/dev/sdX3`| 	Linux swap 	|More than 512 MiB |
 ### Partition the disks
 ```
-fdisk /dev/sda 
+fdisk /dev/sda
 ```
 ### Format disks 
 ```
