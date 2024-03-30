@@ -148,7 +148,7 @@ timedatectl set-time "2022-11-02 20:30:00"
 ```
 ## Mount USB
 ```
-sudo pacman -S udisk2
+sudo pacman -S udisks2
 sudo ln -s /run/media /media
 sudo pacman -S ntfs-3g   # Old hardrive uses ntfs format
 udisksctl mount -b /dev/sdb1
