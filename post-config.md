@@ -112,6 +112,12 @@ pacman -S openconnect networkmanager-openconnect
 ```
 sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
 ```
+## Java
+### Impersonate another window manager
+A problem may occur to show Java applications like JabRef, as JVM hard-coded a list of known of Window Managers while `dvm` is not one of them. One solution is to install `wmname` from `suckless.org`, and then run
+```
+wmname LG3D
+```
 ## Screenshot
 ```
 sudo pacman -S gnome-screenshot
