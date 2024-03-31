@@ -62,5 +62,7 @@ map [fullscreen] f toggle_fullscreen
 map w adjust_window width
 
 # Page up and down
-map h scroll half-up
-map l scroll half-down
+map <A-k> scroll half-up
+map <A-j> scroll half-down
+map <A-l> scroll full-up
+map <A-h> scroll full-down
