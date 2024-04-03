@@ -59,7 +59,6 @@ set scroll-step 50
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
-map w adjust_window width
 
 # Page up and down
 map <A-k> scroll half-up
