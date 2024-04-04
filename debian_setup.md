@@ -4,6 +4,10 @@ Some info to set up the work computer in Debian distro.
 
 ## Download iso image
 The latest images can be found in the [webpage](https://cdimage.debian.org/cdimage/release/current-live/amd64/iso-hybrid/), and `amd64-mate` is preferred for me.
+```
+lsblk
+dd if=debian-live-???-amd64-mate.iso of=/dev/sda status=progress
+```
 ## Install gvim
 ```
 sudo apt install vim-gtk3
@@ -20,7 +24,7 @@ deb http://deb.debian.org/debian/ sid main
 ```
 - Install `openjdk8`
 ```
-sudo apt-get update<br/>
+sudo apt-get update
 sudo apt-get install -y openjdk-8-jdk
 ```
 - Choose java version
