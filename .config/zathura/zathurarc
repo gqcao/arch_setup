@@ -63,5 +63,5 @@ map [fullscreen] f toggle_fullscreen
 # Page up and down
 map <A-k> scroll half-up
 map <A-j> scroll half-down
-map <A-l> scroll full-up
-map <A-h> scroll full-down
+map <A-h> scroll full-up
+map <A-l> scroll full-down
