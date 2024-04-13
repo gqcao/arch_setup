@@ -60,6 +60,10 @@ pacman -S ttf-font-awesome noto-fonts-emoji
 ```
 pacman -S noto-fonts noto-fonts-cjk
 ```
+### List all installed fonts
+```
+fc-list | less
+```
 ## gimp
 ```
 pacman -S gimp           # Problem with gsfonts in urxvt and i3blocks
