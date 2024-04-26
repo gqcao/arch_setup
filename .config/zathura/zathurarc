@@ -66,9 +66,6 @@ set recolor-keephue             true      # keep original color
 # Viewing behavior
 set render-loading "false"
 set scroll-step 50
-unmap f
-map f toggle_fullscreen
-map [fullscreen] f toggle_fullscreen
 
 # Page up and down
 map <A-k> scroll half-up
