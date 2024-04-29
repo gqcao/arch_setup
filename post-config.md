@@ -122,6 +122,18 @@ A problem may occur to show Java applications like JabRef, as JVM hard-coded a l
 ```
 wmname LG3D
 ```
+### Install and Use JRE 8
+```
+sudo pacman -S jre8-openjdk
+# Switch to JRE 8 if there exists another version
+archlinux-java status
+archlinux-java set java-8-openjdk/jre
+```
+### Downloand and install JabRef
+```
+wget "https://downloads.sourceforge.net/project/jabref/v1.0%20to%20v2.11.1/2.9.2/JabRef-2.9.2.jar?ts=gAAAAABmL2WjGUVNr-bu21QGT544qGlMn6iQR4eAJjF2OXwBjlpslFlY7Er06pl76F4kaMJ2gRDnRqCFxunOCfNwYUpckjMccg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fjabref%2Ffiles%2Fv1.0%2520to%2520v2.11.1%2F2.9.2%2FJabRef-2.9.2.jar%2Fdownload" -O JabRef-2.9.2.jar
+java -jar JabRef-2.9.2.jar
+```
 ## Screenshot
 ```
 sudo pacman -S gnome-screenshot
