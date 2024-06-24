@@ -17,19 +17,18 @@ sudo apt install vim-gtk3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
-## Debian install openjdk 8
-- Add the following line to `/etc/apt/sources.list`
+## Debian install Java 8
+### Install `sdkman`
 ```
-deb http://deb.debian.org/debian/ sid main
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
 ```
-- Install `openjdk8`
+### Install JDK 8
 ```
-sudo apt-get update
-sudo apt-get install -y openjdk-8-jdk
+sdk install java 8.0.292-zulu
+sdk list
 ```
-- Choose java version
-`sudo update-alternatives --config java`
-
 ## Teams on Debian
 There is an archived version based on this [forum](https://askubuntu.com/questions/1457083/cant-download-microsoft-teams-deb-file), and follow the instruction below.
 ```
@@ -40,4 +39,9 @@ sudo apt install ./teams_1.5.00.23861_amd64.deb
 ## Install Chinese input from Fcitx5
 ```
 sudo apt install fcitx5 fcitx5-chinese-addons
+im-config
+```
+## Latex
+```
+sudo apt install texlive-full
 ```
