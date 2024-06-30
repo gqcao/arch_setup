@@ -29,6 +29,10 @@ sdk version
 sdk install java 8.0.292-zulu
 sdk list
 ```
+### Include the line in `bashrc` to run `sdkman`
+```
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
 ## Teams on Debian
 There is an archived version based on this [forum](https://askubuntu.com/questions/1457083/cant-download-microsoft-teams-deb-file), and follow the instruction below.
 ```
