@@ -75,3 +75,6 @@ map <A-l> scroll full-down
 
 # selection to clipboard
 set selection-clipboard clipboard
+
+# Show status bar
+map b toggle_statusbar
