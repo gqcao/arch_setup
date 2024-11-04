@@ -1,9 +1,4 @@
----
-title: Arch Linux 64-bit (AArch64) Installation on RPi 4 
-author: Guanqun Cao
-date: \today
----
-
+# Arch Linux 64-bit (AArch64) Installation on RPi 4 
 The original [instruction](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) needs updates due to a [bug in U-boot](https://archlinuxarm.org/forum/viewtopic.php?t=16463). Here is the working guideline to install the OS on Raspberry Pi 4.
 
 ## Mount the SD Card to Linux Machine
