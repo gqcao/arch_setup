@@ -117,11 +117,6 @@ pacman -S openconnect networkmanager-openconnect
 sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
 ```
 ## Java
-### Impersonate another window manager
-A problem may occur to show Java applications like JabRef, as JVM hard-coded a list of known of Window Managers while `dvm` is not one of them. One solution is to install `wmname` from `suckless.org`, and then run
-```
-wmname LG3D
-```
 ### Install `SDKMAN!`
 ```
 curl -s "https://get.sdkman.io" | bash
@@ -138,6 +133,11 @@ sdk list
 ```
 wget "https://downloads.sourceforge.net/project/jabref/v1.0%20to%20v2.11.1/2.9.2/JabRef-2.9.2.jar?ts=gAAAAABmL2WjGUVNr-bu21QGT544qGlMn6iQR4eAJjF2OXwBjlpslFlY7Er06pl76F4kaMJ2gRDnRqCFxunOCfNwYUpckjMccg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fjabref%2Ffiles%2Fv1.0%2520to%2520v2.11.1%2F2.9.2%2FJabRef-2.9.2.jar%2Fdownload" -O JabRef-2.9.2.jar
 java -jar JabRef-2.9.2.jar
+```
+### Impersonate another window manager
+A problem may occur to show Java applications like JabRef, as JVM hard-coded a list of known of Window Managers while `dvm` is not one of them. One solution is to install `wmname` from `suckless.org`, and then run
+```
+wmname LG3D
 ```
 ## Screenshot
 ```
