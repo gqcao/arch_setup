@@ -122,12 +122,17 @@ A problem may occur to show Java applications like JabRef, as JVM hard-coded a l
 ```
 wmname LG3D
 ```
-### Install and Use JRE 8
+### Install `SDKMAN!`
 ```
-sudo pacman -S jre8-openjdk
-# Switch to JRE 8 if there exists another version
-archlinux-java status
-archlinux-java set java-8-openjdk/jre
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk version
+```
+### Install JDK 8
+Install `SDKMAN!` by following the instructions below.
+```
+sdk install java 8.0.292-zulu
+sdk list
 ```
 ### Download and install JabRef
 ```
