@@ -173,6 +173,10 @@ sudo chronyd   # To start off
 timedatectl set-ntp False
 timedatectl set-time "2022-11-02 20:30:00"
 ```
+## PDF Viewer
+```
+sudo pacman -S zathura zathura-pdf-mupdf
+```
 ## Mount USB
 ```
 sudo pacman -S udisks2

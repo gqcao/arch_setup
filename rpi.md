@@ -64,4 +64,9 @@ umount boot root
 pacman-key --init
 pacman-key --populate archlinuxarm
 ```
-## Install Software on RPi4
+## Post Installation
+- Switch to `linux-rpi` kernel. The Linux kernel from the downloading package in the [webpage](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) is a generic kernel for ARM chip, while `linux-rpi` is optimized for RPi.
+```
+sudo pacman -Syu   # Type No to sync the package but not updating
+sudo pacman -S linux-rpi
+```
