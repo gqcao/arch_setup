@@ -177,6 +177,10 @@ timedatectl set-time "2022-11-02 20:30:00"
 ```
 sudo pacman -S zathura zathura-pdf-mupdf
 ```
+## Transmission
+```
+sudo pacman -S transmission-cli
+```
 ## Mount USB
 ```
 sudo pacman -S udisks2
