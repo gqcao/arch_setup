@@ -49,3 +49,6 @@ im-config
 ```
 sudo apt install texlive-full
 ```
+## Docker
+- Instruction on [Docker website](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10#step-2-executing-the-docker-command-without-sudo-optional)
+- Instruction on [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-debian-10#step-2-executing-the-docker-command-without-sudo-optional) 
