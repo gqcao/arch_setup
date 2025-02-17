@@ -3,10 +3,7 @@
 # docker build -t newsboat-arch .
 #
 # To run the Docker container, use:
-# docker run --rm -it \
-#    -v $HOME/.config/newsboat:/home/newsboat/.newsboat \
-#    -v $HOME/local/bin/linkhandler:/home/newsboat/linkhandler \
-#    newsboat-arch
+# docker run --rm -it -v $HOME/.config/newsboat:/home/newsboat/.newsboat newsboat-arch
 #
 # For more options, refer to the documentation.
 
