@@ -7,5 +7,5 @@
     Right click --> View page source.
     Add view-source: to the beginning of the url in the address bar.
     ```
-- Search for the term `externalId` or `channel_id`
+- Search for the term `externalId` or `channel_id`, or find `RSS`.
 - Right after it, there will be a random code (the channel id) to be replaced in the template in the first item. 
