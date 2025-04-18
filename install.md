@@ -21,7 +21,7 @@ ls /sys/firmware/efi/efivars
 #### More advanced BIOS with MBR
 | Mount point 	| Partition 	| Partition type  | Suggested size         |
 | ------------- |:-------------:| ---------------:| ----------------------:|
-|`/mnt/boot` 	|`/dev/sdX1` 	|Linux boot | 200 MiB |
+|`/mnt/boot` 	|`/dev/sdX1` 	|Linux boot | 500 MiB |
 |[SWAP] 	|`/dev/sdX2` 	|Linux swap 	  | 12 GB  |
 |`/mnt/` 	|`/dev/sdX3` 	|Linux root | 30 GB  |
 |`/mnt/home` 	|`/dev/sdX4` 	|Linux home | Remainder of the device|
