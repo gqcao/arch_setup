@@ -114,7 +114,7 @@ pacman -S openconnect networkmanager-openconnect
 ```
 ## Latex
 ```
-sudo pacman -S texlive-most  # Install packages including texlive-core, textlive-bin, textlive-latexextra, textlive-bibtexextra.
+sudo pacman -S texlive  # The texlive group contains most TeX Live packages.
 ```
 ## Java
 ### Install `SDKMAN!`
