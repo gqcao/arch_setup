@@ -21,6 +21,10 @@ RUN useradd -m newsboat
 COPY linkhandler /usr/local/bin/linkhandler
 RUN chmod +x /usr/local/bin/linkhandler
 
+# Copy openssl
+COPY openssl-3.4.0-1-x86_64.pkg.tar.zst /home/newsboat
+RUN pacman -U --noconfirm /home/newsboat/openssl-3.4.0-1-x86_64.pkg.tar.zst
+
 # Set the working directory
 WORKDIR /home/newsboat
 
