@@ -11,7 +11,7 @@
 FROM archlinux:latest
 
 # Install Newsboat and dependencies
-RUN pacman -Sy --noconfirm newsboat curl ca-certificates lynx urlscan \
+RUN pacman -Sy --noconfirm newsboat curl ca-certificates lynx urlscan python-typing_extensions \
     && pacman -Scc --noconfirm  # Clean package cache
 
 # Create a non-root user for security
