@@ -18,7 +18,7 @@ export TERM=st
 export TERMINFO=/usr/share/terminfo
 
 # Alias..
-alias JabRef='java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'
+alias JabRef='wmname LG3D; java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'
 alias dbx='python3 /home/gcao/tools/dropbox.py'
 alias vi='vim'
 alias Mpuhti='sshfs gcao@puhti.csc.fi: /home/gcao/puhti/'
@@ -30,15 +30,17 @@ alias ll='ls -hl'
 alias jpy='jupyter notebook'
 alias vol='alsamixer'
 alias nb='newsboat'
-alias act='source activate'
+alias act='source ~/local/bin/activate_venv'
 alias deact='source deactivate'
 alias vpn='sudo openconnect vpn.cevt.se'
+alias ochat='act llm; cd /home/gcao/Projects/genai-eval/; python -m src.agent.chat_agent -o'
+alias qchat='act llm; cd /home/gcao/Projects/genai-eval/; python -m src.agent.chat_agent -q'
+alias hrpi='ssh 192.168.1.70'
 alias clr='clear'
 alias settime='timedatectl set-time'
 alias p='sudo pacman'
 alias rnd='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-10};echo;'
 alias weeknum='date +%V'
-alias webcam='mpv --title="mpvfloat" --demuxer-lavf-format=video4linux2 --demuxer-lavf-o-set=input_format=mjpeg --geometry=25% av://v4l2:/dev/video2 --profile=low-latency --untimed'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 # Export path
@@ -50,6 +52,13 @@ export C_INCLUDE_PATH=/home/gcao/local/include
 export CPLUS_INCLUDE_PATH=/home/gcao/local/include
 export CPPFLAGS="-I/home/gcao/local/include"
 export LDFLAGS="-L/home/gcao/local/lib"
+
+# AI
+export USER_AGENT=jarvis
+export AZURE_OPENAI_API_KEY=
+export QWEN_API_KEY=
+export LANGSEARCH_API_KEY=
+export SEMANTIC_SCHOLAR_API_KEY=
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep i3 || startx
