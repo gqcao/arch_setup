@@ -7,7 +7,6 @@
 #
 # For more options, refer to the documentation.
 
-
 FROM archlinux:latest
 
 # Install Newsboat and dependencies
@@ -17,13 +16,20 @@ RUN pacman -Sy --noconfirm newsboat curl ca-certificates lynx urlscan python-typ
 # Create a non-root user for security
 RUN useradd -m newsboat
 
-# Copy linkhandler into the image
-COPY linkhandler /usr/local/bin/linkhandler
-RUN chmod +x /usr/local/bin/linkhandler
+# Download linkhandler directly from GitHub repository
+RUN curl -L https://github.com/LukeSmithxyz/voidrice/raw/4a3ad91070328668cd3c8c375e38843f21506e7a/.local/bin/linkhandler \
+    -o /usr/local/bin/linkhandler \
+    && chmod +x /usr/local/bin/linkhandler
 
-# Copy openssl
-COPY openssl-3.4.0-1-x86_64.pkg.tar.zst /home/newsboat
+# Download OpenSSL package directly from Arch Linux archive
+RUN curl -L https://archive.archlinux.org/packages/o/openssl/openssl-3.4.0-1-x86_64.pkg.tar.zst \
+    -o /home/newsboat/openssl-3.4.0-1-x86_64.pkg.tar.zst
+
+# Install the downloaded OpenSSL package
 RUN pacman -U --noconfirm /home/newsboat/openssl-3.4.0-1-x86_64.pkg.tar.zst
+
+# Clean up the downloaded package file
+RUN rm /home/newsboat/openssl-3.4.0-1-x86_64.pkg.tar.zst
 
 # Set the working directory
 WORKDIR /home/newsboat
