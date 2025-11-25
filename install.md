@@ -57,7 +57,7 @@ lsblk
 ```
 ### Install essential packages
 ```
-pacstrap /mnt base base-devel linux linux-firmware gvim
+pacstrap /mnt base base-devel linux linux-firmware-intel gvim
 ```
 ### Create mounting point
 ```
