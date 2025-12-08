@@ -202,3 +202,12 @@ pacman -S acpi acpilight
 The directory of brightness is '/sys/class/backlight/acpi_video0/brightness'
 sudo usermod -aG video gcao
 ```
+## miniconda
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+```
+## pandoc and uv from miniconda
+```
+conda install conda-forge::pandoc
+conda install conda-forge::uv
+```
