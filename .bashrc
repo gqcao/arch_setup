@@ -18,13 +18,13 @@ export TERM=st
 export TERMINFO=/usr/share/terminfo
 
 # Alias..
-alias JabRef='wmname LG3D; java -jar /home/gcao/local/bin/JabRef-2.9.2.jar'
-alias dbx='python3 /home/gcao/tools/dropbox.py'
+alias JabRef='wmname LG3D; java -jar $HOME/local/bin/JabRef-2.9.2.jar'
+alias dbx='python3 $HOME/tools/dropbox.py'
 alias vi='vim'
-alias Mpuhti='sshfs gcao@puhti.csc.fi: /home/gcao/puhti/'
+alias Mpuhti='sshfs gcao@puhti.csc.fi: $HOME/puhti/'
 alias puhti='ssh -X puhti.csc.fi -l gcao'
-alias UMpuhti='fusermount -u /home/gcao/puhti/'
-alias rg='cd /home/gcao/tools/ranger/; python ranger.py /home/gcao'
+alias UMpuhti='fusermount -u $HOME/puhti/'
+alias rg='cd $HOME/tools/ranger/; python ranger.py $HOME'
 # alias mvsde='fusermount -u /home/cao/muvis_merope/'
 alias ll='ls -hl'
 alias jpy='jupyter notebook'
@@ -33,8 +33,8 @@ alias nb='newsboat'
 alias act='source ~/local/bin/activate_venv'
 alias deact='source deactivate'
 alias vpn='sudo openconnect vpn.cevt.se'
-alias ochat='act llm; cd /home/gcao/Projects/genai-eval/; python -m src.agent.chat_agent -o'
-alias qchat='act llm; cd /home/gcao/Projects/genai-eval/; python -m src.agent.chat_agent -q'
+alias ochat='act llm; cd $HOME/Projects/genai-eval/; python -m src.agent.chat_agent -o'
+alias qchat='act llm; cd $HOME/Projects/genai-eval/; python -m src.agent.chat_agent -q'
 alias hrpi='ssh 192.168.1.70'
 alias clr='clear'
 alias settime='timedatectl set-time'
@@ -44,14 +44,14 @@ alias weeknum='date +%V'
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
 # Export path
-export PATH=$PATH:/home/gcao/local/bin
-export LD_LIBRARY_PATH=/home/gcao/local/lib
-export PKG_CONFIG_PATH=/home/gcao/local/lib/pkgconfig
+export PATH=$PATH:$HOME/local/bin
+export LD_LIBRARY_PATH=$HOME/local/lib
+export PKG_CONFIG_PATH=$HOME/local/lib/pkgconfig
 export PYTHONPATH=
-export C_INCLUDE_PATH=/home/gcao/local/include
-export CPLUS_INCLUDE_PATH=/home/gcao/local/include
-export CPPFLAGS="-I/home/gcao/local/include"
-export LDFLAGS="-L/home/gcao/local/lib"
+export C_INCLUDE_PATH=$HOME/local/include
+export CPLUS_INCLUDE_PATH=$HOME/local/include
+export CPPFLAGS="-I$HOME/local/include"
+export LDFLAGS="-L$HOME/local/lib"
 
 # AI
 export USER_AGENT=jarvis
@@ -65,4 +65,4 @@ if [[ "$(tty)" = "/dev/tty1" ]]; then
 fi
 
 # anaconda
-export PATH=/home/gcao/tools/miniconda3/bin/:$PATH
+export PATH=$HOME/tools/miniconda3/bin/:$PATH
