@@ -206,8 +206,11 @@ sudo usermod -aG video gcao
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
-## pandoc and uv from miniconda
+
+## pandoc
+Find the binaries at `https://github.com/jgm/pandoc/releases`
+
+## uv from miniconda
 ```
-conda install conda-forge::pandoc
 conda install conda-forge::uv
 ```
