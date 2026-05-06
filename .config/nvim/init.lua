@@ -33,3 +33,5 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.api.nvim_buf_set_keymap(0, 'n', '<F2>', ':w<bar>!python %<CR>', { noremap = true, silent = true })
   end
 })
+
+require("config.lazy")
