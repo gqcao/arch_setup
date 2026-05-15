@@ -23,14 +23,14 @@ xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 fcitx &
 
 # notification
-dunst &
+#dunst &
 
 # config urxvt based on personal preference
 #xrdb ~/.Xresources
 
 # start dwm
-# dwmblocks &
-# exec dwm
+dwmblocks &
+exec dwm
 
 # start i3
-exec i3
+#exec i3

@@ -54,7 +54,7 @@ tar xvf ranger-stable.tar.gz
 ## Fonts
 ### Show icons in dwmblocks
 ```
-pacman -S ttf-font-awesome noto-fonts-emoji
+pacman -S woff2-font-awesome noto-fonts-emoji
 ```
 ### Install fonts including Chinese
 ```
@@ -107,6 +107,10 @@ sudo systemctl start polkit
 
 # Add to network group
 sudo usermod -G network -a gcao
+```
+## Visual Effect
+```
+sudo pacman -S xcompmgr
 ```
 ## VPN on network manager
 ```
