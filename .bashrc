@@ -33,9 +33,9 @@ alias nb='newsboat'
 alias act='source ~/local/bin/activate_venv'
 alias deact='source deactivate'
 alias vpn='sudo openconnect vpn.cevt.se'
-alias ochat='act llm; cd $HOME/Projects/genai-eval/; python -m src.agent.chat_agent -o'
 alias qchat='act llm; cd $HOME/Projects/genai-eval/; python -m src.agent.chat_agent -q'
-alias hrpi='ssh 192.168.1.70'
+alias gchat='act llm; cd $HOME/Projects/genai-eval/; python -m src.agent.chat_agent -g'
+alias rpi='ssh claw'
 alias clr='clear'
 alias settime='timedatectl set-time'
 alias p='sudo pacman'
@@ -55,8 +55,8 @@ export LDFLAGS="-L$HOME/local/lib"
 
 # AI
 export USER_AGENT=jarvis
-export AZURE_OPENAI_API_KEY=
 export QWEN_API_KEY=
+export GOOGLE_API_KEY=
 export LANGSEARCH_API_KEY=
 export SEMANTIC_SCHOLAR_API_KEY=
 

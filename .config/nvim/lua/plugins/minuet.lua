@@ -27,7 +27,7 @@ return {
             end_point = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
             api_key = "QWEN_API_KEY",
             name = "DashScope",
-            model = "qwen-flash",
+            model = "qwen-plus",
             optional = {
               max_tokens = 256,
               top_p = 0.9,
