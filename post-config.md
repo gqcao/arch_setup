@@ -70,8 +70,20 @@ pacman -S gimp           # Problem with gsfonts in urxvt and i3blocks
 pacman -S ttf-dejavu     # Gives an alternative dependency
 ```
 ## Chinese inputs
+### fcitx
 ```
-sudo pacman -S fcitx fcitx-configtool fcitx-googlepinyin
+wget https://archive.archlinux.org/packages/f/fcitx/fcitx-4.2.9.9-5-x86_64.pkg.tar.zst
+sudo pacman -U fcitx-4.2.9.9-5-x86_64.pkg.tar.zst
+```
+### fcitx-configtool
+```
+wget https://archive.archlinux.org/packages/f/fcitx-configtool/fcitx-configtool-0.4.10-5-x86_64.pkg.tar.zst
+sudo pacman -U fcitx-configtool-0.4.10-5-x86_64.pkg.tar.zst
+```
+### fcitx-googlepinyin
+```
+wget https://archive.archlinux.org/packages/f/fcitx-googlepinyin/fcitx-googlepinyin-0.1.6-8-x86_64.pkg.tar.zst
+sudo pacman -U fcitx-googlepinyin-0.1.6-8-x86_64.pkg.tar.zst
 ```
 ## Linux Sound System
 ```
