@@ -128,6 +128,10 @@ sudo pacman -S xcompmgr
 ```
 pacman -S openconnect networkmanager-openconnect
 ```
+## uv
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 ## Latex
 ```
 sudo pacman -S texlive  # The texlive group contains most TeX Live packages.

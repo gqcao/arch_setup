@@ -24,7 +24,7 @@ alias vi='vim'
 alias Mpuhti='sshfs gcao@puhti.csc.fi: $HOME/puhti/'
 alias puhti='ssh -X puhti.csc.fi -l gcao'
 alias UMpuhti='fusermount -u $HOME/puhti/'
-alias rg='cd $HOME/tools/ranger/; python ranger.py $HOME'
+alias rg='cd $HOME/tools/ranger/; uv run ranger.py $HOME'
 # alias mvsde='fusermount -u /home/cao/muvis_merope/'
 alias ll='ls -hl'
 alias jpy='jupyter notebook'
@@ -58,11 +58,9 @@ export USER_AGENT=jarvis
 export QWEN_API_KEY=
 export GOOGLE_API_KEY=
 export LANGSEARCH_API_KEY=
+export JINA_API_KEY=
 export SEMANTIC_SCHOLAR_API_KEY=
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep i3 || startx
 fi
-
-# anaconda
-export PATH=$HOME/tools/miniconda3/bin/:$PATH
