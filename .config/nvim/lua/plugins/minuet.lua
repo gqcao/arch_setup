@@ -29,6 +29,7 @@ return {
             name = "DashScope",
             model = "qwen-plus",
             optional = {
+              enable_thinking = false,
               max_tokens = 256,
               top_p = 0.9,
             },
