@@ -33,11 +33,10 @@ sdk list
 ```
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 ```
-## Teams on Debian
-There is an archived version based on this [forum](https://askubuntu.com/questions/1457083/cant-download-microsoft-teams-deb-file), and follow the instruction below.
+## Teams for Linux
+We adopt the binary release from `https://github.com/IsmaelMartinez/teams-for-linux/releases`
 ```
-wget https://web.archive.org/web/20221130115842/https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.5.00.23861_amd64.deb
-sudo apt install ./teams_1.5.00.23861_amd64.deb 
+wget -P $HOME/Downloads https://github.com/IsmaelMartinez/teams-for-linux/releases/download/v2.11.1/teams-for-linux-2.11.1.tar.gz
 ```
 
 ## Install Chinese input from Fcitx5

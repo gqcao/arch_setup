@@ -232,8 +232,3 @@ Find the binaries at `https://github.com/jgm/pandoc/releases`
 
 ## PDFtk
 Find the binaries at `https://gitlab.com/pdftk-java/pdftk/-/releases`
-
-## uv from miniconda
-```
-conda install conda-forge::uv
-```
