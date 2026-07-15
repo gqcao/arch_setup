@@ -236,3 +236,9 @@ Find the binaries at `https://gitlab.com/pdftk-java/pdftk/-/releases`
 ## ffmpeg
 - Binary: `ffmpeg-master-latest-linux64-lgpl-shared.tar.xz`
 - Url: `https://github.com/BtbN/FFmpeg-Builds/releases`
+
+## urlscan, markitdown
+```
+uv tool install urlscan
+uv tool install markitdown[pdf]
+```
