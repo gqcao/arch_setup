@@ -240,5 +240,5 @@ Find the binaries at `https://gitlab.com/pdftk-java/pdftk/-/releases`
 ## urlscan, markitdown
 ```
 uv tool install urlscan
-uv tool install markitdown[pdf]
+uv tool install markitdown[pdf] --with "numpy<2.4.0"
 ```
