@@ -134,7 +134,7 @@ pacman -S librewolf
 ```
 ### Bypass the portal inside Firefox/LibreWolf to adopt native GTK file dialogs
 - Type `about:config` in your LibreWolf or Firefox address bar.
-- Search for: `textwidget.use-xdg-desktop-portal.file-picker`
+- Search for: `widget.use-xdg-desktop-portal.file-picker`
 - Double-click it and change the value from "2" (default/auto) or "1" to "0".
 
 ## uv
